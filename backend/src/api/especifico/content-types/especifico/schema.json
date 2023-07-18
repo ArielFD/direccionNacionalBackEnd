@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "especificos",
+  "info": {
+    "singularName": "especifico",
+    "pluralName": "especificos",
+    "displayName": "especifico",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numProveedor": {
+      "type": "string"
+    },
+    "tipoContrato": {
+      "type": "string"
+    },
+    "domicilioLegal": {
+      "type": "string"
+    },
+    "codREEUP": {
+      "type": "string"
+    },
+    "codNIT": {
+      "type": "string"
+    },
+    "cuentaBancaria": {
+      "type": "string"
+    },
+    "titular": {
+      "type": "string"
+    },
+    "agenciaBancaria": {
+      "type": "string"
+    },
+    "banco": {
+      "type": "string"
+    },
+    "bancoSitio": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "pago": {
+      "type": "string"
+    },
+    "valor": {
+      "type": "decimal"
+    },
+    "firma": {
+      "type": "date"
+    },
+    "vencimiento": {
+      "type": "date"
+    },
+    "objetoContrato": {
+      "type": "string"
+    },
+    "clasificacionContrato": {
+      "type": "string"
+    },
+    "dictamenLegal": {
+      "type": "string"
+    },
+    "acta": {
+      "type": "string"
+    },
+    "fechaActa": {
+      "type": "date"
+    },
+    "acuerdo": {
+      "type": "text"
+    },
+    "observaciones": {
+      "type": "text"
+    },
+    "empresa": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::empresa.empresa"
+    },
+    "tipoProveedor": {
+      "type": "string"
+    },
+    "correo": {
+      "type": "string"
+    },
+    "suplements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::suplement.suplement",
+      "mappedBy": "especifico"
+    },
+    "contract": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contract.contract",
+      "inversedBy": "especificos"
+    },
+    "numCliente": {
+      "type": "string"
+    },
+    "organismo": {
+      "type": "string"
+    }
+  }
+}
